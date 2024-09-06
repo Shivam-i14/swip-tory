@@ -1,0 +1,188 @@
+.wrapper {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+}
+
+.modal {
+  background-color: white;
+  width: 95%;
+  max-width: 475px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  position: relative;
+}
+.slides {
+  display: flex;
+  gap: 20px;
+  overflow: auto;
+  padding: 30px 10px;
+}
+.slide {
+  position: relative;
+  width: 100px;
+  padding: 4px 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.addSlide {
+  width: 100px;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100px;
+  cursor: pointer;
+  box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.slideCross {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  display: none;
+  color: gray;
+  width: 15px;
+  height: 15px;
+}
+
+.slide:hover .slideCross {
+  display: block;
+}
+.storyInfo {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.heading,
+.description,
+.image,
+.category {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.heading input {
+  flex-grow: 1;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #ccc;
+}
+.image input {
+  flex-grow: 1;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #ccc;
+}
+.heading input:active {
+  outline: none;
+}
+.description textarea {
+  flex-grow: 1;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #ccc;
+}
+.category option {
+  flex-grow: 1;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #ccc;
+}
+.category select {
+  flex-grow: 1;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #ccc;
+}
+.storyInfo label {
+  min-width: 100px;
+}
+.btns {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.btns button {
+  padding: 4px;
+  min-width: 80px;
+  cursor: pointer;
+  background-color: #ff7373;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 1.8rem;
+  text-transform: capitalize;
+}
+.slideMoverBtn {
+  display: flex;
+  gap: 10px;
+}
+.cross {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: black;
+  width: 20px;
+}
+@media screen and (max-width: 720px) {
+  .storyInfo {
+    gap: 10px;
+  }
+
+  .heading,
+  .description,
+  .image,
+  .category {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  .heading input {
+    width: 100%;
+  }
+  .description textarea {
+    width: 100%;
+  }
+  .category select {
+    width: 100%;
+  }
+  .btns {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .slideMoverBtn {
+    flex-direction: column;
+  }
+  .submitBtn {
+    width: 100%;
+  }
+}

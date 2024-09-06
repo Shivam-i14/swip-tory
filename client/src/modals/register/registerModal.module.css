@@ -1,0 +1,99 @@
+.wrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 20;
+}
+.modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+  width: 95%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.heading {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.formData {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.formData input {
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+.username,
+.password {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cross {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  width: 25px;
+}
+.passwordInput {
+  position: relative;
+  width: 100%;
+}
+.passwordInput input {
+  width: 100%;
+}
+
+.eye {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+}
+.registerBtn {
+  padding: 10px 80px;
+  cursor: pointer;
+  background-color: #ff7373;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  margin-right: 10px;
+  text-transform: capitalize;
+}
+@media screen and (max-width: 768px) {
+  .formData {
+    gap: 25px;
+  }
+  .username,
+  .password {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .username,
+  input {
+    width: 100%;
+  }
+}
